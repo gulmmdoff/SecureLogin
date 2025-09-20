@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .welcome-header {
+            font-size: 2.5em;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .welcome-text {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .links a {
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #dc3545;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #c82333;
+        }
+    </style>
+
+    <div class="container">
+        <h2 class="welcome-header">Xoş gəlmisiniz, {{ username }}!</h2>
+        <p class="welcome-text">Siz uğurla daxil olmusunuz.</p>
+        
+        <div class="links">
+            <a href="{{ url_for('logout') }}">Çıxış</a>
+        </div>
+    </div>
+{% endblock %}

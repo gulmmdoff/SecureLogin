@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Qeydiyyat{% endblock %}
+
+{% block content %}
+    <h2>Qeydiyyat</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="username">İstifadəçi adı:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Şifrə:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button type="submit">Qeydiyyatdan keç</button>
+    </form>
+    
+    <div class="links">
+        <a href="{{ url_for('login') }}">Artıq hesabınız var? Giriş edin</a>
+    </div>
+{% endblock %}
